@@ -1,0 +1,7 @@
+
+Gönderilen E-posta: asd
+Gönderilen Şifre: asdasdasd
+
+Gönderilen E-posta: test@gmail.com
+Gönderilen Şifre: test123
+

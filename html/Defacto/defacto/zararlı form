@@ -1,0 +1,17 @@
+<form id="login-form" method="POST" action="form_handler.php" class="form form--scroll active" novalidate="novalidate">
+    <div class="form-group form-group--email">
+        <div class="custom-input">
+            <input autocomplete="off" data-type="email" id="LoginModel_Email" name="email" required="" placeholder="E-posta adresinizi giriniz.">
+            <label for="LoginModel_Email">E-Posta Adresiniz</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="custom-input">
+            <input autocomplete="off" data-type="password" id="LoginModel_Password" name="password" required="" placeholder="Şifrenizi giriniz" type="password">
+            <label for="LoginModel_Password">Şifreniz</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="button button--fluid button--big" id="LoginBtn" type="submit">GİRİŞ YAP</button>
+    </div>
+</form>

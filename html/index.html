@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routing Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            cursor: pointer;
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 20px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: #575757;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .submenu {
+            position: relative;
+        }
+        .submenu .submenu-content {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .submenu-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .submenu-content a:hover {
+            background-color: #ddd;
+        }
+        .submenu:hover .submenu-content {
+            display: block;
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">XSS Zafiyetleri 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <div class="submenu">
+                    <a class="dropbtn">Reflected XSS</a>
+                    <div class="submenu-content">
+                        <a href="http://www.bugboo.xyz/rxss/rxss.php">Reflected XSS with GET Request</a>
+                        <a href="http://www.bugboo.xyz/p_rxss/p_rxss.php">Reflected XSS with POST Request</a>
+                        <a href="http://www.bugboo.xyz/h_rxss/h_rxss.php">Reflected XSS with HEADER Request</a>
+                    </div>
+                </div>
+                <div class="submenu">
+                    <a class="dropbtn">Reflected Contexts XSS</a>
+                    <div class="submenu-content">
+                        <a href="http://www.bugboo.xyz/level0.php">Href Context</a>
+                        <a href="http://www.bugboo.xyz/level1.php">Tag Context</a>
+                        <a href="http://www.bugboo.xyz/level2.php">Tag Context II</a>
+                        <a href="http://www.bugboo.xyz/level3.php">Tag Context III</a>
+                        <a href="http://www.bugboo.xyz/level4.php">Iframe Context</a>
+                        <a href="http://www.bugboo.xyz/level5.php">CSS Context</a>
+                        <a href="http://www.bugboo.xyz/level6.php">Textarea Context</a>
+                        <a href="http://www.bugboo.xyz/level7.php">Protokol and Html Context</a>
+			<a href="http://www.bugboo.xyz/polyglot.php">Polyglot Text Case</a>
+			<a href="http://www.bugboo.xyz/noscript.php">Noscript Text Case</a>
+                    </div>
+                </div>
+                <div class="submenu">
+                    <a class="dropbtn">Encoded XSS</a>
+                    <div class="submenu-content">
+                        <a href="http://www.bugboo.xyz/level8.php">Base64 Encoded XSS Test</a>
+                        <a href="http://www.bugboo.xyz/level9.php">URL Encoded XSS Test</a>
+                        <a href="http://www.bugboo.xyz/level10.php">HTML Encoded XSS Test</a>
+                        <a href="http://www.bugboo.xyz/level11.php">Base64 ve HTML Encoding XSS Test</a>
+                        <a href="http://www.bugboo.xyz/level12.php">Base64 ve URL Encoded XSS Test</a>
+                        <a href="http://www.bugboo.xyz/level13.php">HTML ve URL Encoding XSS Test</a>
+                    </div>
+                </div>
+                <div class="submenu">
+                    <a class="dropbtn">Stored XSS</a>
+                    <div class="submenu-content">
+                        <a href="http://www.bugboo.xyz/g_sxss/g_sxss.php">Stored XSS with GET Request</a>
+                        <a href="http://www.bugboo.xyz/sxss/sxss.php">Stored XSS with POST Request</a>
+                        <a href="http://www.bugboo.xyz/h_sxss/h_sxss.php">Stored XSS with HEADER Request</a>
+                        <a href="http://www.bugboo.xyz/sxss2/sxss2.php">Stored XSS Medium</a>
+                    </div>
+                </div>
+                <div class="submenu">
+                    <a class="dropbtn">DOM XSS</a>
+                    <div class="submenu-content">
+                        <a href="http://www.bugboo.xyz/dxss/dxss.php">DOM XSS with GET Request</a>
+                        <a href="http://www.bugboo.xyz/p_dxss/p_dxss.php">DOM XSS with POST Request</a>
+                        <a href="http://www.bugboo.xyz/h_dxss/h_dxss.php">DOM XSS with HEADER Request</a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <div class="container">
+        <h1>XSS Zafiyetleri</h1>
+        <p>Yukarıdaki menüden farklı XSS zafiyetlerini test edebilirsiniz.</p>
+    </div>
+</body>
+</html>
